@@ -31,7 +31,7 @@ function startExpress() {
 
   app.get('/api/slow', function (req, res) {
     console.time('slowApi');
-    const baseNumber = 15;
+    const baseNumber = 7;
     let result = 0;
     for (let i = Math.pow(baseNumber, 7); i >= 0; i--) {
       result += i;
