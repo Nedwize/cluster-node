@@ -38,22 +38,9 @@ app.get('/api', function (req, res) {
 
 For a test duration of 20 seconds, with 150 requests per second and a concurrency of 10, these were the results
 
-| Target                    | API Without Clustering |
-| ------------------------- | ---------------------- |
-| Total Test Time           | 20 s                   |
-| Requests Per Second (RPS) | 150                    |
-| Concurrency Level         | 10                     |
-| Completed requests        | 2717                   |
-| **Total Errors**          | **629**                |
-| _Mean Latency_            | _1342.7 ms_            |
-| Longest Request           | 2336 ms                |
-
-| Target                    | API With Clustering |
-| ------------------------- | ------------------- |
-| Total Test Time           | 20 s                |
-| Requests Per Second (RPS) | 150                 |
-| Concurrency Level         | 10                  |
-| Completed requests        | 2931                |
-| **Total Errors**          | **0**               |
-| _Mean Latency_            | _32.4 ms_           |
-| Longest Request           | 239 ms              |
+| Target             | API Without Clustering | API With Clustering |
+| ------------------ | ---------------------- | ------------------- |
+| Completed requests | 2717                   | 2931                |
+| **Total Errors**   | **629**                | **0**               |
+| _Mean Latency_     | _1342.7 ms_            | _32.4 ms_           |
+| Longest Request    | 2336 ms                | 239 ms              |
