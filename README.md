@@ -36,22 +36,24 @@ app.get('/api', function (req, res) {
 });
 ```
 
-| Target URL                | http://localhost:3000/api-without-cluster |
-| ------------------------- | ----------------------------------------- |
-| Total Test Time           | 20 s                                      |
-| Requests Per Second (RPS) | 150                                       |
-| Concurrency Level         | 10                                        |
-| Completed requests        | 2717                                      |
-| Total Errors              | 629                                       |
-| Mean Latency              | 1342.7 ms                                 |
-| Longest Request           | 2336 ms                                   |
+For a test duration of 20 seconds, with 150 requests per second and a concurrency of 10, these were the results
 
-| Target URL                | http://localhost:3000/api-with-cluster |
-| ------------------------- | -------------------------------------- |
-| Total Test Time           | 20 s                                   |
-| Requests Per Second (RPS) | 150                                    |
-| Concurrency Level         | 10                                     |
-| Completed requests        | 2931                                   |
-| Total Errors              | 0                                      |
-| Mean Latency              | 32.4 ms                                |
-| Longest Request           | 239 ms                                 |
+| Target                    | API Without Clustering |
+| ------------------------- | ---------------------- |
+| Total Test Time           | 20 s                   |
+| Requests Per Second (RPS) | 150                    |
+| Concurrency Level         | 10                     |
+| Completed requests        | 2717                   |
+| **Total Errors**          | **629**                |
+| _Mean Latency_            | _1342.7 ms_            |
+| Longest Request           | 2336 ms                |
+
+| Target                    | API With Clustering |
+| ------------------------- | ------------------- |
+| Total Test Time           | 20 s                |
+| Requests Per Second (RPS) | 150                 |
+| Concurrency Level         | 10                  |
+| Completed requests        | 2931                |
+| **Total Errors**          | **0**               |
+| _Mean Latency_            | _32.4 ms_           |
+| Longest Request           | 239 ms              |
