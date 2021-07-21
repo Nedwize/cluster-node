@@ -29,7 +29,7 @@ function startExpress() {
     res.send('Hello World!');
   });
 
-  app.get('/api/slow', function (req, res) {
+  app.get('/api', function (req, res) {
     console.time('slowApi');
     const baseNumber = 7;
     let result = 0;
